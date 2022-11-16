@@ -1,4 +1,8 @@
 {
   "name": "FSO-Helsinki-Exercises",
-  "packageManager": "yarn@3.3.0"
+  "packageManager": "yarn@3.3.0",
+  "private": true,
+  "workspaces": [
+    "part1/courseinfo"
+  ]
 }
