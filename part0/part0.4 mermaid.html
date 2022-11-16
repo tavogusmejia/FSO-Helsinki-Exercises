@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+        <h2>Diagram depicting the situation where the user creates a new note on page<br>
+        https://studies.cs.helsinki.fi/exampleapp/notes when writing something into the <br>
+        text field and clicking the submit button.</h2>      
+    <pre class="mermaid">
+        sequenceDiagram
+        Note over Browser: User writes (or not) <br> on the form field
+        
+        Note over Browser: User clicks on "SAVE" button
+        
+        Browser->>Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note <br> with content type as application/x-www-form-urlencoded
+        Server-->>Browser:HTTP status code 302, URL redirect to <br> https://studies.cs.helsinki.fi/exampleapp/notes
+        Browser->>Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+        Server-->>Browser: HTML-cod
+        Browser->>Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+        Server-->>Browser: main.css
+        Browser->>Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+        Server-->>Browser: main.js
+        
+        Note over Browser: Browser starts executing <br>js-code that requests <br>JSON data from Server 
+        
+        Browser->>Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+        Server-->>Browser: [{ content: "HTML is easy", date: "2019-05-23" }, ...]
+        
+        Note over Browser: Browser executes the <br>event handler that <br>renders notes to display
+    </pre>
+    <script type="module">
+      import mermaid from 'https://unpkg.com/mermaid@9/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+  </body>
+</html>

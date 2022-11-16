@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h2>Diagram depicting the situation where the user creates a new note <br>using the single page version of the app. </h2>
+    <pre class="mermaid">
+        sequenceDiagram
+        Note over Browser: User writes (or not) <br> on the form field
+        
+        Note over Browser: User clicks on "SAVE" button
+        
+        Browser->>Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa <br> with content type as application/json <br> containing both content and timestamp.
+        
+        Note over Server: Event handler calls <br> method to prevent default <br> handling of form submit.
+        
+        Server-->Server: JavaScript code to send data to server with<br> an HTTP POST and a predetermined data type (JSON)
+                
+        Server-->>Browser:HTTP status code 201 Created
+        
+        Browser-->Browser: notes.push(note): Event handler to "push" the data <br>into the active note list on the browser. 
+        
+        Note over Browser: Browser renders the new note <br>to display into the note list. 
+        
+    </pre>
+    <script type="module">
+      import mermaid from 'https://unpkg.com/mermaid@9/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+  </body>
+</html>

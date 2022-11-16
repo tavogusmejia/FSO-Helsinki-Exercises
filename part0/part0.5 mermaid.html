@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h2>Diagram depicting the situation where the user goes to the single page app <br>
+      version of the notes app at https://studies.cs.helsinki.fi/exampleapp/spa. </h2>
+    <pre class="mermaid">
+        sequenceDiagram
+        Note over Browser: User goes to the single <br>page app version <br>of the notes app
+        
+        Browser->>Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+        Server-->>Browser: HTML-code
+        Browser->>Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+        Server-->>Browser: main.css
+        Browser->>Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+        Server-->>Browser: spa.js
+        
+        Note over Browser: Browser starts executing <br>js-code that requests <br>JSON data from Server 
+        
+        Browser->>Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+        Server-->>Browser: [{ content: "HTML is easy", date: "2019-05-23" }, ...]
+        
+        Note over Browser: Browser executes the <br>event handler that <br>renders notes to display
+    </pre>
+    <script type="module">
+      import mermaid from 'https://unpkg.com/mermaid@9/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+  </body>
+</html>
