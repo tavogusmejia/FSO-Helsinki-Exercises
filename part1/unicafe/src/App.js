@@ -6,9 +6,9 @@ const Button = ({ handleClick, text }) => (
   </button>
 )
 
-const StatisticsLine = ({text, value}) =>(
-<>{text} = {value}</>
-)
+// const StatisticsLine = ({text, value}) =>(
+// <>{text} = {value}</>
+// )
 
 const Statistics = ({good, neutral, bad}) =>{
   
