@@ -2897,16 +2897,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/yargs@npm:^16.0.0":
-  version: 16.0.4
-  resolution: "@types/yargs@npm:16.0.4"
-  dependencies:
-    "@types/yargs-parser": "*"
-  checksum: caa21d2c957592fe2184a8368c8cbe5a82a6c2e2f2893722e489f842dc5963293d2f3120bc06fe3933d60a3a0d1e2eb269649fd6b1947fe1820f8841ba611dd9
-  languageName: node
-  linkType: hard
-
-"@types/yargs@npm:^17.0.8":
+"@types/yargs@npm:^16.0.0, @types/yargs@npm:^17.0.8":
   version: 17.0.13
   resolution: "@types/yargs@npm:17.0.13"
   dependencies:
@@ -4547,6 +4538,16 @@ __metadata:
 "course_tinkering@workspace:course_tinkering":
   version: 0.0.0-use.local
   resolution: "course_tinkering@workspace:course_tinkering"
+  dependencies:
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-scripts: 5.0.1
+  languageName: unknown
+  linkType: soft
+
+"courseinfo2@workspace:part2/courseinfo2":
+  version: 0.0.0-use.local
+  resolution: "courseinfo2@workspace:part2/courseinfo2"
   dependencies:
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7475,7 +7476,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-diff@npm:^27.5.1":
+"jest-diff@npm:^27.5.1, jest-diff@npm:^29.3.1":
   version: 29.3.1
   resolution: "jest-diff@npm:29.3.1"
   dependencies:
@@ -7604,7 +7605,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-matcher-utils@npm:^27.5.1, jest-matcher-utils@npm:^29.3.1":
+"jest-matcher-utils@npm:^27.5.1":
   version: 27.5.1
   resolution: "jest-matcher-utils@npm:27.5.1"
   dependencies:
@@ -7616,7 +7617,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-message-util@npm:^27.5.1, jest-message-util@npm:^29.3.1":
+"jest-matcher-utils@npm:^29.3.1":
+  version: 29.3.1
+  resolution: "jest-matcher-utils@npm:29.3.1"
+  dependencies:
+    chalk: ^4.0.0
+    jest-diff: ^29.3.1
+    jest-get-type: ^29.2.0
+    pretty-format: ^29.3.1
+  checksum: 311e8d9f1e935216afc7dd8c6acf1fbda67a7415e1afb1bf72757213dfb025c1f2dc5e2c185c08064a35cdc1f2d8e40c57616666774ed1b03e57eb311c20ec77
+  languageName: node
+  linkType: hard
+
+"jest-message-util@npm:^27.5.1":
   version: 27.5.1
   resolution: "jest-message-util@npm:27.5.1"
   dependencies:
@@ -7647,6 +7660,23 @@ __metadata:
     slash: ^3.0.0
     stack-utils: ^2.0.3
   checksum: 1f266854166dcc6900d75a88b54a25225a2f3710d463063ff1c99021569045c35c7d58557b25447a17eb3a65ce763b2f9b25550248b468a9d4657db365f39e96
+  languageName: node
+  linkType: hard
+
+"jest-message-util@npm:^29.3.1":
+  version: 29.3.1
+  resolution: "jest-message-util@npm:29.3.1"
+  dependencies:
+    "@babel/code-frame": ^7.12.13
+    "@jest/types": ^29.3.1
+    "@types/stack-utils": ^2.0.0
+    chalk: ^4.0.0
+    graceful-fs: ^4.2.9
+    micromatch: ^4.0.4
+    pretty-format: ^29.3.1
+    slash: ^3.0.0
+    stack-utils: ^2.0.3
+  checksum: 15d0a2fca3919eb4570bbf575734780c4b9e22de6aae903c4531b346699f7deba834c6c86fe6e9a83ad17fac0f7935511cf16dce4d71a93a71ebb25f18a6e07b
   languageName: node
   linkType: hard
 
