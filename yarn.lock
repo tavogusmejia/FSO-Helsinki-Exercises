@@ -9254,6 +9254,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"phonebook@workspace:part2/phonebook":
+  version: 0.0.0-use.local
+  resolution: "phonebook@workspace:part2/phonebook"
+  dependencies:
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-scripts: 5.0.1
+  languageName: unknown
+  linkType: soft
+
 "picocolors@npm:^0.2.1":
   version: 0.2.1
   resolution: "picocolors@npm:0.2.1"
