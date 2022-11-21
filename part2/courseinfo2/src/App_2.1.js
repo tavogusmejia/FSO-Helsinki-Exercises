@@ -1,50 +1,56 @@
 const App = () => {
   const course = {
-    name: 'Half Stack application development',
+    id: 1,
+    name: "Half Stack application development",
     parts: [
       {
-        name: 'Fundamentals of React',
-        exercises: 10
+        name: "Fundamentals of React",
+        exercises: 10,
+        id: 1,
       },
       {
-        name: 'Using props to pass data',
-        exercises: 7
+        name: "Using props to pass data",
+        exercises: 7,
+        id: 2,
       },
       {
-        name: 'State of a component',
-        exercises: 14
-      }
-    ]
-  }
-    return (
-      <div>
-      <Header course={course.name}/>
-      <Content part1={course.parts[0].name} part2={course.parts[1].name} part3={course.parts[2].name} exercises1={course.parts[0].exercises} exercises2={course.parts[1].exercises} exercises3={course.parts[2].exercises}/>
-      <Total total={course.parts[0].exercises+course.parts[1].exercises+course.parts[2].exercises}/>
-      </div>
-    )
-  }
-  
-  export default App
-  
-  
-  const Header = (props) => (
-    <h1>{props.course}</h1>
-  )
-  
-  const Content = (props) => (
+        name: "State of a component",
+        exercises: 14,
+        id: 3,
+      },
+    ],
+  };
+  return <Course course={course} />;
+};
+
+export default App;
+
+const Course = (props) => {
+  const { course } = props;
+  return (
+    <div>
+      <Header key={course.id} course={course} />
+      <Content course={course} />
+    </div>
+  );
+};
+
+const Header = (props) => {
+  const { course } = props;
+
+  return <h1>{course.name}</h1>;
+};
+
+const Content = (props) => {
+  const { course } = props;
+
+  return (
     <>
-    <Part part={props.part1} exercises={props.exercises1}/>
-    <Part part={props.part2} exercises={props.exercises2}/>
-    <Part part={props.part3} exercises={props.exercises3}/></>
-    
-  )
-  
-  const Part = (props) => (
-  <p>{props.part} {props.exercises}</p>
-  )
-  
-  const Total = (props) => (
-    <p>Number of exercises {props.total}</p>
-  )
-  
+      {course.parts.map((courseParts) => (
+        <p key={courseParts.id}>
+          {courseParts.name} {courseParts.exercises}
+        </p>
+      ))}
+    </>
+  );
+};
