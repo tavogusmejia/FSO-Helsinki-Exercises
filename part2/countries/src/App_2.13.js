@@ -25,7 +25,6 @@ const FilterMoreThan10 = () => {
 };
 
 const FilterEqual1 = ({ countriesToShow }) => {
-  console.log(countriesToShow);
   const langs = Object.values(countriesToShow[0].languages).map(
     (element, index) => ({ id: index, language: element })
   );
